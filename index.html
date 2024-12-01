@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prosta strona z dialogami</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Witaj na mojej stronie!</h1>
+    <p>Kliknij przyciski, aby zobaczyć różne funkcje JavaScript.</p>
+
+ 
+    <button onclick="pokazAlert()">Pokaż Alert</button>
+    <button onclick="zadajPytanie()">Zadaj pytanie</button>
+    <button onclick="potwierdzDzialanie()">Potwierdź działanie</button>
+    <button onclick="otworzNoweOkno()">Otwórz nowe okno</button>
+
+    <script>
+        // Szymon Szubert 3f
+        
+        function pokazAlert() {
+            alert("To jest komunikat alert!"); 
+        }
+
+        
+        function zadajPytanie() {
+            const odpowiedz = prompt("Jak masz na imię?"); 
+            if (odpowiedz) {
+                alert("Cześć, " + odpowiedz + "! Miło Cię poznać.");
+            } else {
+                alert("Nie podałeś swojego imienia."); 
+            }
+        }
+
+       
+        function potwierdzDzialanie() {
+            const decyzja = confirm("Gramy w cs'ka?");
+            if (decyzja) {
+                alert("No i sigma!"); 
+            } else {
+                alert("No jak to nie."); 
+            }
+        }
+
+        
+        function otworzNoweOkno() {
+            const url = "https://zse.edu.gdansk.pl/pl"; 
+            window.open(url, "_blank", "width=800,height=600"); 
+        }
+    </script>
+</body>
+</html>
